@@ -15,4 +15,4 @@ There are 3 page object files which contain the web elements pertaining to each 
 3.PropertyDetails.js
 
 In order to run Tests using the following command:
-protractor ConfigurationFile
+protractor ConfigFile
