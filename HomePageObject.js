@@ -1,44 +1,18 @@
-/*/* question-page.js 
-var QuestionPage = function() {
-  this.question = element(by.model('question.text'));
-  this.answer = element(by.binding('answer'));
-  this.button = element(by.className('question-button'));
-
-  this.ask = function(question) {
-    this.question.sendKeys(question);
-    this.button.click();
-  };
-};
-
-module.exports = QuestionPage;
- * 
- * 
- * 
- * 
- * 
- */
-
-
-
-
-
-
-
-
-
 var FirstPage = function(){
 	
 //Loactors of the first page
-	//this.URL = "www.realtor.com/" ;
+	
 	var searchBox = element(by.css('#searchBox')) ;
 	var searchButton = element(by.xpath("//*[@id='homepage-header']/div[2]/div/div[2]/span/button[2]")) ;
-	//var searchButton = element(by.css("div[class*= 'btn btn-primary js-search']")) ;
-	//Actions 
-	//Function to navigate to the website
-	//Function 1
 	var EC = protractor.ExpectedConditions ;
 	
 	
+	
+	
+	/*Function to navigate to the website  */
+	
+	
+	/* Navigate to the Website */
 	this.go = function(){
 		browser.waitForAngularEnabled(false) ;	
 		 
@@ -52,23 +26,21 @@ var FirstPage = function(){
 		
 	};
 	
-	//Function 2
+	/* Enter the text Mortgan Town, WV in the search box */
 	this.enterKey = function(){
 		searchBox.sendKeys("MorganTown,WV") ;
 		
 		
 	};
 	
-	//Function3
+	/*  Click on the search button  */
 	this.EnterSearchbutton = function(){
 		 browser.actions().sendKeys(protractor.Key.ARROW_DOWN).perform() ;
 		 browser.actions().sendKeys(protractor.Key.ENTER).perform().then (function() {
 			 browser.wait(EC.urlContains("Morgantown_WV"),5000);
-//			 
-			 })  ; 
-			 /*browser.sleep(5000) ;
 		 
-		 })  ;*/
+			 })  ; 
+		
 
 }
 };
