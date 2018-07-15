@@ -36,7 +36,7 @@ var FirstPage = function(){
 	//Actions 
 	//Function to navigate to the website
 	//Function 1
-	
+	var EC = protractor.ExpectedConditions ;
 	
 	
 	this.go = function(){
@@ -44,7 +44,7 @@ var FirstPage = function(){
 		 
 		
 			    // implicit and page load timeouts
-			    browser.manage().timeouts().pageLoadTimeout(40000);
+			   browser.manage().timeouts().pageLoadTimeout(40000);
 			    browser.manage().timeouts().implicitlyWait(25000);
 		 //Fetch the URL
 		
@@ -63,10 +63,12 @@ var FirstPage = function(){
 	this.EnterSearchbutton = function(){
 		 browser.actions().sendKeys(protractor.Key.ARROW_DOWN).perform() ;
 		 browser.actions().sendKeys(protractor.Key.ENTER).perform().then (function() {
-			 
-			 browser.sleep(5000) ;
+			 browser.wait(EC.urlContains("Morgantown_WV"),5000);
+//			 
+			 })  ; 
+			 /*browser.sleep(5000) ;
 		 
-		 })  ;
+		 })  ;*/
 
 }
 };
