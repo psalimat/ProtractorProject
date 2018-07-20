@@ -14,5 +14,5 @@ There are 3 page object files which contain the web elements pertaining to each 
 2.SearchPropertyResults.js
 3.PropertyDetails.js
 
-In order to run Tests using the following command:
+In order to run Tests, use the following command:
 protractor ConfigFile
